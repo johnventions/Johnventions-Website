@@ -119,6 +119,7 @@
 </template>
 
 <script>
+import {isMobile} from '@/isMobile.js';
 
 export default {
 	name: 'Home',
@@ -135,9 +136,10 @@ export default {
 	},
 	mounted: function() {
 		var pos = -10;
-		for(var i=0; i<8; i++) {
-			pos += Math.floor(Math.random() * 24) + 5;
-			var w = Math.floor(Math.random() * 5) + 12;
+		var mountainCount = isMobile() ? 4 : 8;
+		for(var i=0; i<mountainCount; i++) {
+			pos += Math.floor(Math.random() * 20) + (isMobile() ? 12 : 6);
+			var w = Math.floor(Math.random() * 5) + (isMobile() ? 20 : 12);
 			var left = pos - w;
 			var right = pos + w;
 			var t = 2 + Math.random() * 3;
@@ -146,15 +148,19 @@ export default {
 			var m = {
 				width: w,
 				pos: pos,
+				order: Math.floor(Math.random() * 16), 
 				points: pos + "," + y + " "+ left + ",100 " + right + ",100",
 				style: {
-					'transform': 'translateY(35%)',
+					'transform': 'translateY(55%)',
 					'transition': 'transform ' + t + 's ease',
 					'transition-delay': d +'s'
 				}
 			};
 			this.mountains.push(m);
 		}
+		this.mountains = this.mountains.sort(function(a, b) {
+			return a.order - b.order;
+		});
 		var self = this;
 		setTimeout(function() {
 			self.mountains.forEach(function(v) {
@@ -182,6 +188,9 @@ export default {
 	.mountain
 		fill #440552
 		fill #181419
+		stroke rgba(white, 0.15)
+		@media $tablet-up
+			stroke-width 0.2px
 	h2
 		border-bottom 4px solid lblue
 		display inline-block

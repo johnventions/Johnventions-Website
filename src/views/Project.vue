@@ -19,7 +19,7 @@
                     </a>
                 </div>
                 <div class='row gallery'>
-                    <div class='col-12 col-md-4' v-for="(i, x) in project.images" v-bind:key="x">
+                    <div class='col-12 col-md-4 gallery-item' v-for="(i, x) in project.images" v-bind:key="x">
                         <img v-bind:src="i.s">
                     </div>
                 </div>
@@ -43,6 +43,7 @@ export default {
         this.project = this.projectList.find(function(v) {
             return v.slug == p;
         });
+        document.title = this.project.name + " | John Horton";
         if (this.project == null) {
             //redirect to homepage
             this.$router.push('/');
@@ -67,6 +68,12 @@ export default {
         padding 40px 0
         .gallery
             padding-top 50px
+            .gallery-item
+                height 200px
+                margin-bottom 20px
             img
                 width 100%
+                max-height 100%
+                object-fit cover
+                
 </style>

@@ -29,7 +29,10 @@ module.exports = [
         img: '/projects/drawsasterThumb.jpg',
         description: 'Drawsaster is a telephone-style drawing game that you can play on your phone. Players all start by writing a phrase, which another player will have to draw. The next player then writes a phrase that describes that new image... then repeat that pattern until every phrase makes its way to every player. At the end, everyone gets to see how their phrase transformed from start to finish. The front end is built with javascript and the SignaturePad JS library. The back-end is built with PHP and stores all of the data in a MySQL database',
         images: [
-            
+            {
+                s: '/projects/drawsaster/menu.png',
+                l: '/projects/drawsaster/menu.png',
+            },
         ]
     },
     {

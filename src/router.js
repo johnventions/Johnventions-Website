@@ -16,8 +16,7 @@ export default new Router({
     },
 		{
 			path: '/projects',
-			name: 'Projects',
-			component: Home
+			redirect: '/'
 		},
 		{ path: '/projects/:slug',
 			name: 'Project Detail',

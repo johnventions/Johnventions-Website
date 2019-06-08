@@ -87,9 +87,9 @@
 		</section>
 		<section class='content contact'>
 			<div class='container'>
-				<div class='row'>
-					<div class='offset-lg-4 col-lg-8'>
-						<h2 class='hangleft'>Contact</h2>
+				<div class='row justify-content-md-center'>
+					<div class='col-12 col-lg-8'>
+						<h2 class='hangall'>Contact</h2>
 						<p>Interested in working together?</p>
 					</div>
 				</div>
@@ -128,7 +128,7 @@ export default {
 			projectList: require('@/projects.js'),
 			mountains: [],
 			skills1: ['.Net MVC', 'MySQL / SQL Server', 'MongoDB', 'NodeJS & Express'],
-			skills2: ['Javascript / jQuery', 'Angular2 & VueJS', 'CSS / Stylus / SASS',  'PHP']
+			skills2: ['Angular2 & VueJS', 'Javascript / jQuery', 'CSS / Stylus / SASS',  'PHP']
 		}
 	},
 	methods: {
@@ -312,9 +312,12 @@ export default {
 				transform translateY(-50%)
 		.skill-list
 			text-align center
+			p
+				&:last-of-type
+					margin-bottom 0
 	section.contact
 		background linear-gradient(sky, space)
-		text-align right
+		text-align center
 		a, li
 			font-size 20px
 		.cards

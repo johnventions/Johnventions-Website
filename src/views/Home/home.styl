@@ -1,0 +1,163 @@
+@import '~@/styles/imports.styl';
+	space = #181419;
+	lgreen = #0a2711;
+	sky = #111133;
+	purps = #230929;
+	lpurps = #e67bff;
+	dpurps = #430652;
+	lblue = #4aa1ff;
+	main
+		background space
+	.mountain
+		fill #440552
+		fill #181419
+		stroke rgba(white, 0.15)
+		@media $tablet-up
+			stroke-width 0.2px
+	h2
+		border-bottom 4px solid lblue
+		display inline-block
+		margin-bottom 25px
+		&.hangright
+			padding-right 42px
+			transition padding-right 0.5s ease
+			&:hover
+				padding-right 52px
+		&.hangleft
+			padding-left 42px
+			transition padding-left 0.5s ease
+			&:hover
+				padding-left 52px
+		&.hangall
+			padding-left 30px
+			padding-right 30px
+			transition padding 0.5s ease
+			&:hover
+				padding-left 42px
+				padding-right 42px
+	em
+		color lpurps
+		font-style initial
+		transition color 0.5s ease
+	.hero-fixed
+		position fixed
+		width 100%
+		padding 7vw 0
+		@media $tablet-up
+			padding 100px 0
+		@media $desktop-up
+			padding 65px 0
+		@media $desktop-hd-up
+			padding 150px 0
+		p
+			color white
+			font-size 18px
+			text-align center
+	.hero-background
+		background linear-gradient(rgba(0,0,0,.25), rgba(lgreen, 0.5)) ,url('~@/assets/stars.jpeg')
+		background-position bottom center
+		height 78vw
+		background-size 500%
+		width 100%
+		position absolute
+		overflow hidden
+		z-index 0
+		@media $tablet-up
+			height 52vw
+			background-size cover
+		@media $desktop-up
+			height 34vw
+			background-size cover
+
+	.hero-overlay
+		height 78vw
+		position relative
+		background linear-gradient(rgba(0,0,0,.01), rgba(0,0,0,.01) 60%, space)
+		@media $tablet-up
+			height 50vw
+			background linear-gradient(rgba(0,0,0,.01), rgba(0,0,0,.01) 70%, space)
+		@media $desktop-up
+			height 35vw
+			background linear-gradient(rgba(0,0,0,.01), rgba(0,0,0,.01) 70%, space)
+		@media $desktop-hd-up
+			height 31vw
+	h1
+		font-size 42px
+		color white
+		text-align center
+		@media $tablet-up
+			font-size 70px
+			margin-bottom 10px
+		@media $desktop-xl-up
+			font-size 84px
+
+	section.content
+		padding 35px 0 20px
+		position relative
+		background #181419
+		@media $tablet-up
+			padding 55px 0 30px
+		@media $desktop-up
+			padding 85px 0 30px
+	section.about
+		background linear-gradient(space, purps)
+		margin-top -1px
+		margin-bottom -1px
+	section.work
+		text-align center
+		background linear-gradient(purps, sky 75%, sky)
+		p
+			margin-bottom 40px
+		h2, p
+			text-align center
+
+		.item
+			a
+				color white
+			.item-contents
+				background rgba(0, 5, 0, 0.2)
+				margin-bottom 30px
+				padding 8px
+				img
+					display block
+					width 100%
+					margin-bottom 5px
+					transition transform 1s ease
+				&:hover
+					img
+						transform scale(0.90)
+	section.skills
+		background sky
+		h2
+			@media $desktop-up
+				position absolute
+				top 40%
+				transform translateY(-50%)
+		.skill-list
+			text-align center
+			p
+				&:last-of-type
+					margin-bottom 0
+	section.contact
+		background linear-gradient(sky, space)
+		text-align center
+		a, li
+			font-size 20px
+		.cards
+			text-align center
+			.card
+				display block
+				color white
+				text-decoration none
+				padding-top 20px
+				@media $tablet-up
+					padding-top 40px
+				&:hover
+					color lblue
+				i
+					display inline-block
+					font-size 30px
+					padding-right 10px
+					vertical-align middle
+				span
+					text-decoration underline

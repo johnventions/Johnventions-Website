@@ -1,0 +1,133 @@
+<main>
+  <section class="hero-background">
+    <svg
+      height="100%"
+      width="100%"
+      preserveAspectRatio="none"
+      viewBox="0 0 100 100"
+    >
+      <polygon
+        v-for="(m, x) in mountains"
+        class="mountain"
+        v-bind:points="m.points"
+        v-bind:key="x"
+        v-bind:style="m.style"
+      />
+    </svg>
+  </section>
+  <section class="hero-fixed">
+    <div class="container">
+      <div class="animated fadeInUp delay-1s slow">
+        <h1 class="col-12">John Horton</h1>
+        <p class="col-md-12">Web Developer & Maker</p>
+      </div>
+    </div>
+  </section>
+  <section class="hero-overlay"></section>
+  <section class="about content">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-4">
+          <h2 class="hangright">About Me</h2>
+        </div>
+        <div class="col-12 col-lg-8">
+          <p>
+            I'm a Full Stack developer building fun things for the web, the
+            physical world, and everywhere in between. Lately I've been
+            particularly interested in
+            <em>Angular</em>, <em>VueJS</em>, and
+            <em>Socket.io</em> applications that bring groups of people
+            together.
+          </p>
+          <p>
+            In my free time I like messing with
+            <em>Embedded Electronics</em> (i.e. Arduino, Raspberry Pi, etc) and
+            <em>3D printing</em>, to bring the digital world to life.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="work content">
+    <div class="container">
+      <h2 class="hangall">My Work</h2>
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-lg-8">
+          <p>
+            My professional work is mostly private, but I'm always tinkering
+            with something new outside of work. Below are some of the
+            side-projects that I've been passionate about over the past few
+            years
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          class="col-12 col-md-6 col-lg-4 item animated fadeIn"
+          v-for="(proj) in projectList"
+          v-bind:key="proj.slug"
+        >
+          <router-link :to="proj.path">
+            <div class="item-contents">
+              <img v-bind:src="proj.img" v-if="proj.img" />
+              {{ proj.name }}
+            </div>
+          </router-link>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="skills content">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-lg-2">
+          <h2 class="hangright">Skills</h2>
+        </div>
+        <div class="col-12 col-md-6 col-lg-5 skill-list">
+          <p v-for="skill in skills1" v-bind:key="skill">{{ skill }}</p>
+        </div>
+        <div class="col-12 col-md-6 col-lg-5 skill-list">
+          <p v-for="skill in skills2" v-bind:key="skill">{{ skill }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="content contact">
+    <div class="container">
+      <div class="row justify-content-md-center">
+        <div class="col-12 col-lg-8">
+          <h2 class="hangall">Contact</h2>
+          <p>Interested in working together?</p>
+        </div>
+      </div>
+      <div class="row justify-content-center cards">
+        <div class="col-12 col-md-3">
+          <a
+            target="_blank"
+            class="card"
+            href="https://www.twitter.com/johnventions"
+          >
+            <i class="fab fa-twitter"></i>
+            <span>Twitter</span>
+          </a>
+        </div>
+        <div class="col-12 col-md-3">
+          <a
+            target="_blank"
+            class="card"
+            href="https://www.github.com/johnventions"
+          >
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+        </div>
+        <div class="col-12 col-md-3">
+          <a class="card" href="mailto:johnharoldhorton@gmail.com">
+            <i class="fas fa-comments"></i>
+            <span>E-Mail</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

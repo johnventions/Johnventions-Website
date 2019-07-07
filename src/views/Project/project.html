@@ -1,0 +1,35 @@
+<main v-if="project">
+  <section class="hero">
+    <div class="container">
+      <router-link to="/">
+        <span class="back-button"><i class="fas fa-arrow-left"></i> Back</span>
+      </router-link>
+      <h1>{{ project.name }}</h1>
+    </div>
+  </section>
+  <section class="description">
+    <div class="container">
+      <p v-html="project.description"></p>
+      <div class="buttons">
+        <a
+          class="btn btn-primary"
+          v-for="(btn, x) in project.buttons"
+          v-bind:href="btn.url"
+          target="_blank"
+          v-bind:key="x"
+        >
+          {{ btn.title }}
+        </a>
+      </div>
+      <div class="row gallery">
+        <div
+          class="col-12 col-md-4 gallery-item"
+          v-for="(i, x) in project.images"
+          v-bind:key="x"
+        >
+          <img v-bind:src="i.s" v-on:click="lightbox(i)" />
+        </div>
+      </div>
+    </div>
+  </section>
+</main>

@@ -62,6 +62,25 @@ module.exports = [
                 l: '/project_files/drawsaster/drawsaster_action2.jpg',
             }
         ]
+    }    ,
+    {
+        path: '/projects/five-o-tron',
+        slug: 'five-o-tron',
+        name: 'High-Five-O-Tron',
+        hidden: false,
+        img: '/project_files/five/five1t.jpg',
+        description: 'The High-Five-O-Tron is a "high-five kiosk" that integrates with the 15Five API. When an employee sends a virtual high-five to another employee in 15Five (and uses #HighFive), it displays the comment on the screen so the user can redeem their high-five in the real world. The kiosk cycles through the high-fives so everyone can see each others accomplishments.<br/><br/>The machine runs on a Raspberry Pi (Linux single-board computer) to run the software and interface with a servo-motor via the GPIO. The web-interface uses Javascript on the front-end with NodeJS and Python on the backend, which stores the high-fives in a MySQL database.<br/><br/><span class="disclaimer">The High-Five-O-Tron was created in 2016 and is (unfortunately) no longer being used. The code is interesting, but does not represent the best coding principles due to its age.</span>',
+        images: [
+            {
+                s: '/project_files/five/five1t.jpg',
+                l: '/project_files/five/five1.jpg',
+            },
+        ],
+        buttons: [
+            { "title": "Documentation", "url": "https://github.com/johnventions/five-o-tron" },
+        ],
+        video: "kSOEcrU7qzQ"
+
     },
     {
         path: '/projects/litebrite',

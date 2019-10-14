@@ -30,6 +30,7 @@
 	.btn
 		display inline-block
 		background #082f50
+		cursor pointer
 		color white
 		text-decoration none
 		padding 15px 20px
@@ -38,4 +39,16 @@
 			background #04233e
 		+ .btn
 			margin-left 20px
+	button
+		border-style none
+		font-family 'PT Serif', serif
+		font-size 16px
+	.youtube
+		margin-left auto
+		margin-right auto
+		display block
+	.disclaimer
+		font-size 14px
+		font-style italic
+		display block
 </style>

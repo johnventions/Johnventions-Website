@@ -2,12 +2,14 @@
 <style src="./home.styl" lang="stylus" scoped></style>
 <script>
 import { isMobile } from "@/isMobile.js";
+const allProjects = require("@/projects.js");
 
 export default {
   name: "Home",
   data() {
     return {
-      projectList: require("@/projects.js"),
+      // projectList: require("@/projects.js"),
+      projectList: allProjects.filter( x => x.hidden != true ),
       mountains: [],
       skills1: [
         ".Net MVC",

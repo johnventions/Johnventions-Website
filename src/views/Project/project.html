@@ -20,6 +20,15 @@
         >
           {{ btn.title }}
         </a>
+        <button v-if="project.video"
+          v-on:click="videoToggle"
+          class="btn btn-primary">
+          Video
+        </button>
+      </div>
+      <div class='row' v-if="videoOpen">
+        <iframe width="560" height="315" v-bind:src="videoURL()" frameborder="0" class="youtube"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
       <div class="row gallery">
         <div

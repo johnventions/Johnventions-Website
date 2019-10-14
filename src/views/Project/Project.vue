@@ -6,12 +6,19 @@ export default {
   data() {
     return {
       projectList: require("@/projects.js"),
+      videoOpen: false,
       project: null
     };
   },
   methods: {
     lightbox: function(img) {
       this.$lity(img.l);
+    },
+    videoToggle: function() {
+      this.videoOpen = !this.videoOpen;
+    },
+    videoURL: function() {
+      return "https://www.youtube.com/embed/" + this.project.video;
     }
   },
   created: function() {
@@ -28,4 +35,4 @@ export default {
 };
 </script>
 
-<style src="./project.styl" lang="styl" scoped></style>
+<style src="./project.styl" lang="styl"></style>

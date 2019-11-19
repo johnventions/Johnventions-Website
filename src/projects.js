@@ -1,4 +1,38 @@
 module.exports = [
+
+    {
+        path: '/projects/drawsaster',
+        slug: 'drawsaster',
+        name: 'Drawsaster',
+        img: '/project_files/drawsasterThumb.jpg',
+        description: 'Drawsaster is a telephone-style drawing game that you can play on your phone. Players all start by writing a phrase, which another player will have to draw. The next player then writes a phrase that describes that new image... then repeat that pattern until every phrase makes its way to every player. At the end, everyone gets to see how their phrase transformed from start to finish. <br/>The front-end is built with VueJS and the SignaturePad JS library. The back-end is built on an Express server running Socket.io, and stores all of the data in a Mongo database',
+        images: [
+            {
+                s: '/project_files/drawsaster/menu_thumb.jpg',
+                l: '/project_files/drawsaster/menu.png',
+            },
+            {
+                s: '/project_files/drawsaster/draw_2_completed_thumb.jpg',
+                l: '/project_files/drawsaster/draw_2_completed.png',
+            },
+            {
+                s: '/project_files/drawsaster/draw_2_about_thumb.jpg',
+                l: '/project_files/drawsaster/draw_2_about.png',
+            },
+            {
+                s: '/project_files/drawsasterThumb.jpg',
+                l: '/project_files/drawsaster/drawsaster_action.jpg',
+            },
+            {
+                s: '/project_files/drawsaster/drawsaster_action2_thumb.jpg',
+                l: '/project_files/drawsaster/drawsaster_action2.jpg',
+            }
+        ],
+        buttons: [
+            { "title": "Play Now", "url": "https://www.drawsaster.com" },
+            { "title": "Documentation", "url": "https://github.com/johnventions/Drawsaster" }
+        ]
+    },
     {
         path: '/projects/director',
         slug: 'director',
@@ -38,31 +72,6 @@ module.exports = [
             },
         ]
     },
-    {
-        path: '/projects/drawsaster',
-        slug: 'drawsaster',
-        name: 'Drawsaster',
-        img: '/project_files/drawsasterThumb.jpg',
-        description: 'Drawsaster is a telephone-style drawing game that you can play on your phone. Players all start by writing a phrase, which another player will have to draw. The next player then writes a phrase that describes that new image... then repeat that pattern until every phrase makes its way to every player. At the end, everyone gets to see how their phrase transformed from start to finish. The front-end is built with javascript and the SignaturePad JS library. The back-end is built with PHP and stores all of the data in a MySQL database',
-        images: [
-            {
-                s: '/project_files/drawsaster/menu_thumb.jpg',
-                l: '/project_files/drawsaster/menu.png',
-            },
-            {
-                s: '/project_files/drawsaster/completed_thumb.jpg',
-                l: '/project_files/drawsaster/completed.jpg',
-            },
-            {
-                s: '/project_files/drawsasterThumb.jpg',
-                l: '/project_files/drawsaster/drawsaster_action.jpg',
-            },
-            {
-                s: '/project_files/drawsaster/drawsaster_action2_thumb.jpg',
-                l: '/project_files/drawsaster/drawsaster_action2.jpg',
-            }
-        ]
-    }    ,
     {
         path: '/projects/five-o-tron',
         slug: 'five-o-tron',
